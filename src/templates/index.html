@@ -1,0 +1,243 @@
+{% extends "layout.html" %}
+
+{% block title %}Sai Balusu - Personal Website{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container hero-content">
+        <h1>Sai Balusu</h1>
+        <p>MBA Candidate | Business Analyst | Technology Consultant</p>
+        <div class="hero-buttons">
+            <a href="#about" class="btn">Learn More</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/mydp.png') }}" alt="Sai Balusu">
+            </div>
+            <div class="about-text">
+                <p>Highly analytical MBA candidate with over 6 years of robust experience in business and data analysis, agile project management, and technology consulting. Demonstrated expertise in financial modeling, strategic decision-making, and venture evaluation. Strong passion for technology investment, AI, cybersecurity, and med-tech sectors. Adept in managing multiple projects, delivering precise insights, and thriving in fast-paced environments.</p>
+                
+                <div class="skills">
+                    <h3>Core Competencies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Financial Modeling & Investment Analysis</span>
+                        <span class="skill-tag">Venture Capital & Private Equity Research</span>
+                        <span class="skill-tag">Strategic Market Research</span>
+                        <span class="skill-tag">Agile Project Management</span>
+                        <span class="skill-tag">Data Visualization</span>
+                        <span class="skill-tag">Technology Evaluation</span>
+                    </div>
+                </div>
+                
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Advanced Excel</span>
+                        <span class="skill-tag">PowerPoint</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+        <div class="section-title">
+            <h2>Professional Experience</h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <h3>Business Analyst</h3>
+                    <p class="date">Deloitte Consulting, USI | Jan 2021 – Aug 2024</p>
+                    <ul>
+                        <li>Developed comprehensive financial models and business cases to support strategic investment decisions, driving $5M in client savings.</li>
+                        <li>Conducted extensive market and competitive analysis, identifying promising investment opportunities in cloud technologies and cybersecurity.</li>
+                        <li>Collaborated directly with executive-level stakeholders, presenting insights using advanced Excel modeling and impactful PowerPoint visualizations.</li>
+                        <li>Managed multiple project timelines, leading to a 15% operational cost reduction through optimized resource allocation.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <h3>Cloud Associate Engineer</h3>
+                    <p class="date">Zee Entertainment Enterprises Ltd. | Feb 2020 – Jan 2021</p>
+                    <ul>
+                        <li>Conducted detailed market and security analyses to facilitate strategic decisions and supported the expansion of streaming platforms into new markets.</li>
+                        <li>Worked collaboratively to design and implement cloud-based infrastructure, achieving a 20% improvement in operational efficiency.</li>
+                        <li>Actively engaged with stakeholders to refine and validate technology solutions aligned with business and strategic objectives.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="education">
+    <div class="container">
+        <div class="section-title">
+            <h2>Education</h2>
+        </div>
+        <div class="education-cards">
+            <div class="education-card">
+                <h3>Master of Business Administration (MBA)</h3>
+                <p class="date">2024 – Present</p>
+                <p class="institution">University of South Florida, Tampa, FL</p>
+                <p>Relevant Coursework: Data Analytics, Financial Accounting, Strategic Communication, Risk Management, Project Management</p>
+            </div>
+            <div class="education-card">
+                <h3>Bachelor of Information Technology</h3>
+                <p class="date">2015 – 2019</p>
+                <p class="institution">Lovely Professional University, Punjab, India</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="container">
+        <div class="section-title">
+            <h2>Certifications</h2>
+        </div>
+        <div class="education-cards">
+            <div class="education-card">
+                <ul>
+                    <li>AWS Certified DevOps Engineer</li>
+                    <li>Scrum Master (Anticipated)</li>
+                    <li>Microsoft Azure DevOps Expert</li>
+                    <li>Google Cloud Professional DevOps Engineer</li>
+                    <li>Lean Six Sigma Yellow Belt</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="section-title">
+            <h2>Portfolio</h2>
+        </div>
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="analysis">Financial Analysis</button>
+            <button class="filter-btn" data-filter="tech">Technology</button>
+            <button class="filter-btn" data-filter="consulting">Consulting</button>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Portfolio items will be dynamically added based on projects -->
+            <div class="portfolio-item analysis">
+                <img src="{{ url_for('static', filename='images/portfolio-1.jpg') }}" alt="Financial Analysis Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>Financial Modeling</h3>
+                    <p>Strategic investment analysis for technology sector</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="portfolio-item tech">
+                <img src="{{ url_for('static', filename='images/portfolio-2.jpg') }}" alt="Cloud Infrastructure Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>Cloud Infrastructure</h3>
+                    <p>Design and implementation of scalable cloud solutions</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="portfolio-item consulting">
+                <img src="{{ url_for('static', filename='images/portfolio-3.jpg') }}" alt="Strategic Consulting Project" class="portfolio-img">
+                <div class="portfolio-overlay">
+                    <h3>Strategic Consulting</h3>
+                    <p>Market analysis and competitive positioning</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2>Contact Me</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Tampa, FL</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email</h3>
+                        <p>saikrishnamanohar@outlook.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>+1 656 214 9970</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fab fa-linkedin-in"></i>
+                    <div>
+                        <h3>LinkedIn</h3>
+                        <p><a href="https://www.linkedin.com/in/sai-krishna-manohar-balusu/">Connect with me</a></p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fab fa-github"></i>
+                    <div>
+                        <h3>GitHub</h3>
+                        <p><a href="https://github.com/SaiBalusu-usf">SaiBalusu-usf</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form" action="/contact" method="POST">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
