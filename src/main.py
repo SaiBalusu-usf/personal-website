@@ -55,7 +55,7 @@ def index():
         with open(website_data_file, 'r') as f:
             website_data = json.load(f)
     
-    return render_template('index.html', data=website_data)
+    return render_template('src/static/index.html', data=website_data)
 
 @app.route('/contact', methods=['POST'])
 @csrf_protected
