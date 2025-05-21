@@ -38,7 +38,8 @@ jobs:
       - name: Create necessary files for Azure deployment
         run: |
           # Create a startup command file
-          echo "gunicorn --bind=0.0.0.0 --timeout 600 src.main:app" > startup.sh
+          # Change this line in your workflow file
+          echo "gunicorn --bind=0.0.0.0 --timeout 600 run:app" > startup.sh
           chmod +x startup.sh
           
           # Create a .env file with environment variables
