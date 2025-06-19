@@ -77,7 +77,7 @@ typing_extensions==4.13.2
 tzdata==2025.2
 tzlocal==5.3.1
 uritools==5.0.0
-urllib3==2.4.0
+urllib3==2.5.0
 uvicorn==0.34.2
 weasyprint==65.1
 webencodings==0.5.1
